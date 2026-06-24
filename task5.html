@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Validation</title>
+
+    <style>
+        body{
+            background-color: lightblue;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        input, button{
+            padding: 8px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+
+    <input type="text" id="name" placeholder="Enter your name">
+
+    <button id="submitBtn">Submit</button>
+
+    <p id="message"></p>
+
+    <script>
+
+        let button = document.getElementById("submitBtn");
+
+        button.addEventListener("click", function(){
+
+            let name = document.getElementById("name").value;
+            let message = document.getElementById("message");
+
+            if(name.trim() === ""){
+                message.innerHTML = "Please enter your name.";
+            }
+            else{
+                message.innerHTML = "Welcome, " + name + "!";
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
