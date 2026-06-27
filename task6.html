@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Ticket Booking</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#eef5ff;
+        }
+
+        .container{
+            width:350px;
+            margin:60px auto;
+            padding:20px;
+            background:white;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h2{
+            text-align:center;
+            color:#004080;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        input[type="submit"]{
+            background:#004080;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        input[type="submit"]:hover{
+            background:#0066cc;
+        }
+    </style>
+
+    <script>
+        function bookTicket() {
+            alert("✈️ Your flight ticket has been booked successfully!\n\nA confirmation email will be sent shortly.");
+        }
+    </script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>✈ Flight Ticket Booking</h2>
+
+    <form onsubmit="bookTicket(); return false;">
+
+        <label>Passenger Name</label>
+        <input type="text" placeholder="Enter passenger name" required>
+
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter email address" required>
+
+        <input type="submit" value="Continue Booking">
+
+    </form>
+
+</div>
+
+</body>
+</html>
